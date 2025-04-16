@@ -50,7 +50,7 @@
     </td>
     <td>
       <a href="https://github.com/your-org/proposal-generator" target="_blank">
-        <img src="https://img.shields.io/badge/Proposal%20Generator-AI%20%2B%20Fiverr/Upwork-FFEE58?style=for-the-badge&logo=github&logoColor=black" alt="Proposal Generator" />
+        <img src="https://img.shields.io/badge/Proposal%20Generator-AI%20%2B%20Freelancer/Upwork-FFEE58?style=for-the-badge&logo=github&logoColor=black" alt="Proposal Generator" />
       </a>
     </td>
   </tr>
