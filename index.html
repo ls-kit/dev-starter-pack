@@ -34,8 +34,27 @@
 </section>
 
 <section class="py-12">
-  <div class="swiper-container container mx-auto pb-12"> <!-- Added padding-bottom -->
+  <div class="swiper-container container mx-auto relative pb-8"> <!-- Added relative for positioning -->
     <div class="swiper-wrapper">
+      <!-- টেমপ্লেট কার্ড ১ -->
+      <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="https://placehold.co/600x400?text=Portfolio+Template" alt="HTML Template" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">HTML/CSS পোর্টফোলিও</h3>
+          <p class="text-gray-600 mb-4">ফ্রেশারদের জন্য রেস্পন্সিভ ডিজাইন</p>
+          <a href="https://github.com/yourusername/portfolio-starter" class="text-blue-600 font-medium">ডাউনলোড করুন →</a>
+        </div>
+      </div>
+
+      <!-- টেমপ্লেট কার্ড ২ -->
+      <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="https://placehold.co/600x400?text=Laravel+CRM" alt="Laravel Template" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">লারাভেল CRM</h3>
+          <p class="text-gray-600 mb-4">কাস্টমার ম্যানেজমেন্ট সিস্টেম</p>
+          <a href="https://github.com/yourusername/laravel-crm" class="text-blue-600 font-medium">ডাউনলোড করুন →</a>
+        </div>
+      </div>
       <!-- টেমপ্লেট কার্ড ১ -->
       <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
         <img src="https://placehold.co/600x400?text=Portfolio+Template" alt="HTML Template" class="w-full h-48 object-cover">
@@ -98,7 +117,7 @@
     </div>
 
     <!-- Pagination and Navigation -->
-    <div class="swiper-pagination mt-4"></div>
+    <div class="swiper-pagination mt-4"></div> <!-- Pagination below the slider -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
@@ -250,6 +269,11 @@
   .swiper-container {
     overflow: hidden; /* Prevent overflow */
   }
+  .swiper-pagination {
+    position: relative; /* Position below the slider */
+    text-align: center;
+    margin-top: 16px;
+  }
   .swiper-pagination-bullet {
     background-color: #d1d5db; /* Tailwind gray-300 */
     opacity: 1;
@@ -266,6 +290,16 @@
   .swiper-button-prev {
     color: #2563eb; /* Tailwind blue-600 */
     font-size: 1.5rem;
+    position: absolute;
+    top: 50%; /* Vertically center the arrows */
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .swiper-button-next {
+    right: 10px; /* Position on the right side */
+  }
+  .swiper-button-prev {
+    left: 10px; /* Position on the left side */
   }
 </style>
 
