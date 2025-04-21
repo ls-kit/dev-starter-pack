@@ -26,13 +26,101 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
- <!-- হেডার -->
- <header class="bg-blue-600 text-white py-6">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-3xl font-bold">ফ্রি ডেভেলপার টেমপ্লেট কালেকশন</h1>
-        <p class="mt-2">HTML, React, Laravel, Bootstrap সহ ১০+ স্টার্টার টেমপ্লেট</p>
+<!-- হেডার -->
+<header class="bg-yellow-400 text-black shadow-md">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+      <img src="https://via.placeholder.com/40x40" alt="Logo" class="w-10 h-10 rounded-full">
+      <span class="text-xl font-bold">চেষ্টা একাডেমী</span>
     </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center space-x-6 relative z-20">
+
+      <!-- Dropdown Menu -->
+      <div class="relative group">
+        <button class="font-medium hover:text-white transition duration-200 flex items-center gap-1">
+          স্টার্টার প্যাকেজ <span class="text-xs">▼</span>
+        </button>
+        <div class="absolute left-0 top-full hidden group-hover:flex flex-col bg-white/80 backdrop-blur-md text-black border border-yellow-300 rounded-lg shadow-lg z-10 w-48 text-sm"
+             onmouseover="this.classList.remove('hidden')" onmouseout="this.classList.add('hidden')">
+          <a href="#" class="block px-4 py-2 hover:bg-yellow-100 transition rounded-t-md">Laravel Starter</a>
+          <a href="#" class="block px-4 py-2 hover:bg-yellow-100 transition">React Admin</a>
+          <a href="#" class="block px-4 py-2 hover:bg-yellow-100 transition rounded-b-md">Flutter UI</a>
+        </div>
+      </div>
+
+      <!-- Other Links -->
+      <a href="#" class="hover:text-white font-medium transition">টুলস</a>
+      <a href="#" class="hover:text-white font-medium transition">কোর্স</a>
+
+      <!-- Search Icon -->
+      <button class="hover:text-white transition text-xl">
+        🔍
+      </button>
+    </div>
+
+    <!-- Right Side Buttons -->
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="#" class="text-sm font-medium hover:text-white transition">Sign In</a>
+      <a href="#" class="bg-black text-yellow-300 px-4 py-2 rounded hover:bg-gray-900 font-semibold text-sm transition">Get Started</a>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden flex items-center">
+      <button id="mobile-menu-toggle" class="text-3xl font-bold focus:outline-none">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <div class="border-b border-yellow-300 pb-2">
+      <button id="mobile-submenu-toggle" class="w-full text-left py-2 text-black font-medium flex items-center justify-between">
+        স্টার্টার প্যাকেজ <span class="text-xs">▼</span>
+      </button>
+      <div id="mobile-submenu" class="hidden flex-col pl-4">
+        <a href="#" class="block py-1 text-black text-sm">Laravel Starter</a>
+        <a href="#" class="block py-1 text-black text-sm">React Admin</a>
+        <a href="#" class="block py-1 text-black text-sm">Flutter UI</a>
+      </div>
+    </div>
+    <a href="#" class="block py-2 text-black font-medium">টুলস</a>
+    <a href="#" class="block py-2 text-black font-medium">কোর্স</a>
+    <a href="#" class="block py-2 text-black font-medium">Sign In</a>
+    <a href="#" class="block py-2 text-black font-medium">Get Started</a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const submenuToggle = document.getElementById('mobile-submenu-toggle');
+    const mobileSubmenu = document.getElementById('mobile-submenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    submenuToggle.addEventListener('click', () => {
+      mobileSubmenu.classList.toggle('hidden');
+    });
+
+    // Dropdown behavior fix for desktop
+    const group = document.querySelector('.group');
+    const dropdown = group.querySelector('div');
+    group.addEventListener('mouseenter', () => {
+      dropdown.classList.remove('hidden');
+    });
+    group.addEventListener('mouseleave', () => {
+      dropdown.classList.add('hidden');
+    });
+  </script>
 </header>
+
+
+
+
 
 <!-- মেইন সেকশন -->
 <section class="container mx-auto px-4 py-12">
