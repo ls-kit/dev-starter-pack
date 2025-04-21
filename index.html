@@ -445,7 +445,7 @@
 
 <style>
   /* Custom styles for Swiper */
-  .template-swiper {
+  .template-swiper, .starter-swiper {
     overflow: hidden; /* Prevent overflow */
   }
   .swiper-pagination {
@@ -483,19 +483,20 @@
 </style>
 
 <!-- Swiper Scripts -->
-<script>
-  const swiper = new Swiper('.starter-swiper', {
-    slidesPerView: 2.2,
-    centeredSlides: true,
-    spaceBetween: 20,
-    freeMode: true,
-    breakpoints: {},
-      768: { slidesPerView: 4 },
-      1024: { slidesPerView: 5 }
-    }
-  });
-</script>
 
+
+<script>
+  const starterSwiper = new Swiper('.starter-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 16,
+  breakpoints: {
+    640: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    1024: { slidesPerView: 4 },
+  },
+});
+
+</script>
 
 
 
