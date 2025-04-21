@@ -123,20 +123,67 @@
 
 
 <!-- মেইন সেকশন -->
-<section class="container mx-auto px-4 py-12">
-    <!-- হাইলাইট -->
-    <div class="bg-white rounded-lg shadow-md p-6 mb-8 text-center">
-        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">বোনাস</span>
-        <h2 class="text-2xl font-bold mt-3">গিটহাবে স্টার দিলেই পাবেন <span class="text-blue-600">সব টেমপ্লেট</span></h2>
-        <a target="_blank" href="https://github.com/ls-kit/dev-starter-pack" 
-           class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
-           ⭐ স্টার দিয়ে সাপোর্ট করুন
+<!-- Highlighted Section Below Header -->
+<section class="bg-gradient-to-br from-yellow-300 via-yellow-100 to-white py-6 px-4 md:px-10">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-black">🔆 আমাদের স্টার্টার টুলস কালেকশন</h2>
+      <p class="text-gray-700 text-sm md:text-base mt-2">গিটহাবে স্টার দিলেই পাবেন সব টেমপ্লেট — শেখা হবে আরও সহজ!</p>
+      <div class="flex justify-center mt-4">
+        <a href="https://github.com/ls-kit/dev-starter-pack" target="_blank" class="inline-flex items-center gap-2 bg-black text-yellow-300 hover:bg-gray-900 px-5 py-2 rounded-full shadow font-medium transition">
+          ⭐ Star on GitHub
         </a>
+      </div>
     </div>
 
-    <!-- টেমপ্লেট গ্রিড -->
-    
+    <!-- Swiper Slider Layout for Rounded Cards -->
+    <div class="swiper mySwiper px-4">
+      <div class="swiper-wrapper justify-center gap-6">
+        <div class="swiper-slide !w-auto flex flex-col items-center text-center mx-2">
+          <div class="w-28 h-28 rounded-full border-2 border-red-400 bg-red-50 flex items-center justify-center shadow-md">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" alt="Laravel" class="w-10 h-10">
+          </div>
+          <h3 class="text-sm font-semibold text-yellow-700 mt-2">Laravel Starter</h3>
+        </div>
+        <div class="swiper-slide !w-auto flex flex-col items-center text-center">
+          <div class="w-28 h-28 rounded-full border-2 border-blue-400 bg-blue-50 flex items-center justify-center shadow-md">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="w-10 h-10">
+          </div>
+          <h3 class="text-sm font-semibold text-yellow-700 mt-2">React Admin</h3>
+        </div>
+        <div class="swiper-slide !w-auto flex flex-col items-center text-center">
+          <div class="w-28 h-28 rounded-full border-2 border-cyan-400 bg-cyan-50 flex items-center justify-center shadow-md">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="w-10 h-10">
+          </div>
+          <h3 class="text-sm font-semibold text-yellow-700 mt-2">Flutter UI</h3>
+        </div>
+        <div class="swiper-slide !w-auto flex flex-col items-center text-center">
+          <div class="w-28 h-28 rounded-full border-2 border-green-400 bg-green-50 flex items-center justify-center shadow-md">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-10 h-10">
+          </div>
+          <h3 class="text-sm font-semibold text-yellow-700 mt-2">Firebase Auth</h3>
+        </div>
+        <div class="swiper-slide !w-auto flex flex-col items-center text-center">
+          <div class="w-28 h-28 rounded-full border-2 border-yellow-400 bg-yellow-50 flex items-center justify-center shadow-md">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="w-10 h-10">
+          </div>
+          <h3 class="text-sm font-semibold text-yellow-700 mt-2">Portfolio Builder</h3>
+        </div>
+        <div class="swiper-slide !w-auto flex flex-col items-center text-center">
+          <div class="w-28 h-28 rounded-full border-2 border-purple-400 bg-purple-50 flex items-center justify-center shadow-md">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS" class="w-10 h-10">
+          </div>
+          <h3 class="text-sm font-semibold text-yellow-700 mt-2">Proposal Generator</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+
+
+
+
 
 <section class="py-12">
   <div class="swiper-container container mx-auto relative pb-8"> <!-- Added relative for positioning -->
@@ -429,6 +476,26 @@
   }
 </style>
 
+
+<script>
+ const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2.2,
+    spaceBetween: 20,
+    freeMode: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 5,
+      }
+    }
+  });
+
+</script>
 
 
 </body>
